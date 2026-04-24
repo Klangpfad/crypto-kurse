@@ -6,6 +6,19 @@
 
 .crypto-card {
   min-height: 190px;
+  cursor: pointer;
+}
+
+.crypto-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.crypto-card-link:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 .crypto-top {
@@ -47,6 +60,13 @@
 
 .crypto-change.is-down {
   color: #ff9d9d;
+}
+
+.crypto-sparkline {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 1rem;
 }
 
 .crypto-source {

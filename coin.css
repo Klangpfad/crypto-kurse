@@ -1,0 +1,73 @@
+.coin-header {
+  padding-bottom: 0;
+}
+
+.coin-detail-card {
+  padding: 1.25rem;
+}
+
+.coin-detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.coin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.coin-stats div {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.coin-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--muted-2);
+  font-size: 0.82rem;
+}
+
+.coin-stats strong {
+  display: block;
+  color: var(--text);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-variant-numeric: tabular-nums;
+}
+
+.coin-stats .is-up {
+  color: #7be9a7;
+}
+
+.coin-stats .is-down {
+  color: #ff9d9d;
+}
+
+.coin-chart {
+  display: block;
+  width: 100%;
+  height: 180px;
+}
+
+@media (max-width: 720px) {
+  .coin-detail-top,
+  .coin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .coin-detail-top {
+    display: grid;
+  }
+
+  .coin-chart {
+    height: 140px;
+  }
+}

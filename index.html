@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crypto Kurse · Tom & Gina</title>
-  <meta name="description" content="Kleine Crypto-Kursseite für BTC, ETH und SOL im Tom & Gina Design. Kurse dienen nur zur Information.">
+  <meta name="description" content="Kleine Crypto-Kursseite für BTC, ETH, SOL, XRP, DOT und FET im Tom & Gina Design. Kurse dienen nur zur Information.">
   <meta name="theme-color" content="#05060a">
   <meta property="og:title" content="Crypto Kurse · Tom & Gina">
   <meta property="og:site_name" content="runlevel.eth">
-  <meta property="og:description" content="BTC, ETH und SOL ruhig und kompakt im Blick. Keine Anlageberatung.">
+  <meta property="og:description" content="BTC, ETH, SOL, XRP, DOT und FET ruhig und kompakt im Blick. Keine Anlageberatung.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="gina.png">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -24,7 +24,7 @@
     <div class="hero-text">
       <a class="badge ens" href="https://klangpfad.github.io/">Zurück Startseite</a>
       <h1>Crypto Kurse</h1>
-      <p class="hero-copy">BTC, ETH und SOL ruhig im Blick, ohne Hype und ohne Handlungsempfehlung.</p>
+      <p class="hero-copy">BTC, ETH, SOL, XRP, DOT und FET ruhig im Blick, ohne Hype und ohne Handlungsempfehlung.</p>
       <p>Eine kleine Kursseite für schnelle Orientierung. Die Werte werden über CoinGecko geladen und dienen ausschließlich zur Information.</p>
 
       <div class="hero-actions">
@@ -33,7 +33,7 @@
       </div>
 
       <div class="meta-row" aria-label="Schwerpunkte">
-        <span class="meta-pill">BTC · ETH · SOL</span>
+        <span class="meta-pill">BTC · ETH · SOL · XRP · DOT · FET</span>
         <span class="meta-pill">Live-Daten via CoinGecko</span>
         <span class="meta-pill">nur Information</span>
       </div>
@@ -62,30 +62,75 @@
 
       <div class="crypto-board" aria-live="polite">
         <article class="card crypto-card project-card" data-coin-card="bitcoin">
-          <div class="crypto-top">
-            <h3>Bitcoin</h3>
-            <span class="tag">BTC</span>
-          </div>
-          <p class="crypto-price" data-coin-price="bitcoin">lädt …</p>
-          <div class="crypto-change" data-coin-change="bitcoin">24h: --</div>
+          <a class="crypto-card-link" href="coin.html?coin=bitcoin" aria-label="Bitcoin Details öffnen">
+            <div class="crypto-top">
+              <h3>Bitcoin</h3>
+              <span class="tag">BTC</span>
+            </div>
+            <p class="crypto-price" data-coin-price="bitcoin">lädt …</p>
+            <div class="crypto-change" data-coin-change="bitcoin">24h: --</div>
+            <canvas class="crypto-sparkline" data-coin-chart="bitcoin" aria-hidden="true"></canvas>
+          </a>
         </article>
 
         <article class="card crypto-card project-card" data-coin-card="ethereum">
-          <div class="crypto-top">
-            <h3>Ethereum</h3>
-            <span class="tag">ETH</span>
-          </div>
-          <p class="crypto-price" data-coin-price="ethereum">lädt …</p>
-          <div class="crypto-change" data-coin-change="ethereum">24h: --</div>
+          <a class="crypto-card-link" href="coin.html?coin=ethereum" aria-label="Ethereum Details öffnen">
+            <div class="crypto-top">
+              <h3>Ethereum</h3>
+              <span class="tag">ETH</span>
+            </div>
+            <p class="crypto-price" data-coin-price="ethereum">lädt …</p>
+            <div class="crypto-change" data-coin-change="ethereum">24h: --</div>
+            <canvas class="crypto-sparkline" data-coin-chart="ethereum" aria-hidden="true"></canvas>
+          </a>
         </article>
 
         <article class="card crypto-card project-card" data-coin-card="solana">
-          <div class="crypto-top">
-            <h3>Solana</h3>
-            <span class="tag">SOL</span>
-          </div>
-          <p class="crypto-price" data-coin-price="solana">lädt …</p>
-          <div class="crypto-change" data-coin-change="solana">24h: --</div>
+          <a class="crypto-card-link" href="coin.html?coin=solana" aria-label="Solana Details öffnen">
+            <div class="crypto-top">
+              <h3>Solana</h3>
+              <span class="tag">SOL</span>
+            </div>
+            <p class="crypto-price" data-coin-price="solana">lädt …</p>
+            <div class="crypto-change" data-coin-change="solana">24h: --</div>
+            <canvas class="crypto-sparkline" data-coin-chart="solana" aria-hidden="true"></canvas>
+          </a>
+        </article>
+
+        <article class="card crypto-card project-card" data-coin-card="ripple">
+          <a class="crypto-card-link" href="coin.html?coin=ripple" aria-label="XRP Details öffnen">
+            <div class="crypto-top">
+              <h3>XRP</h3>
+              <span class="tag">XRP</span>
+            </div>
+            <p class="crypto-price" data-coin-price="ripple">lädt …</p>
+            <div class="crypto-change" data-coin-change="ripple">24h: --</div>
+            <canvas class="crypto-sparkline" data-coin-chart="ripple" aria-hidden="true"></canvas>
+          </a>
+        </article>
+
+        <article class="card crypto-card project-card" data-coin-card="polkadot">
+          <a class="crypto-card-link" href="coin.html?coin=polkadot" aria-label="Polkadot Details öffnen">
+            <div class="crypto-top">
+              <h3>Polkadot</h3>
+              <span class="tag">DOT</span>
+            </div>
+            <p class="crypto-price" data-coin-price="polkadot">lädt …</p>
+            <div class="crypto-change" data-coin-change="polkadot">24h: --</div>
+            <canvas class="crypto-sparkline" data-coin-chart="polkadot" aria-hidden="true"></canvas>
+          </a>
+        </article>
+
+        <article class="card crypto-card project-card" data-coin-card="artificial-superintelligence-alliance">
+          <a class="crypto-card-link" href="coin.html?coin=fetch-ai" aria-label="FET Details öffnen">
+            <div class="crypto-top">
+              <h3>FET</h3>
+              <span class="tag">FET</span>
+            </div>
+            <p class="crypto-price" data-coin-price="artificial-superintelligence-alliance">lädt …</p>
+            <div class="crypto-change" data-coin-change="artificial-superintelligence-alliance">24h: --</div>
+            <canvas class="crypto-sparkline" data-coin-chart="artificial-superintelligence-alliance" aria-hidden="true"></canvas>
+          </a>
         </article>
       </div>
 

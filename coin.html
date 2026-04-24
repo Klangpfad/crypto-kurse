@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coin Details · Crypto Kurse</title>
+  <meta name="description" content="Kompakte Detailansicht für Crypto-Kurse mit CoinGecko Daten. Kurse dienen nur zur Information.">
+  <meta name="theme-color" content="#05060a">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="crypto.css">
+  <link rel="stylesheet" href="coin.css">
+  <link rel="preconnect" href="https://api.coingecko.com">
+  <link rel="dns-prefetch" href="https://api.coingecko.com">
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%2305060a"/><text x="50%25" y="54%25" text-anchor="middle" dominant-baseline="middle" fill="%237fb0ff" font-family="Arial, sans-serif" font-size="30">₿</text></svg>'>
+</head>
+
+<body>
+  <header class="coin-header">
+    <div class="hero-text">
+      <a class="badge ens" href="index.html">Zurück zur Übersicht</a>
+      <p class="section-note">Crypto Details</p>
+      <h1 id="coin-name">lädt …</h1>
+      <p class="hero-copy">Kompakte Kursdetails aus CoinGecko Daten. Die Werte dienen ausschließlich zur Information.</p>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="coin-detail-title">
+      <div class="section-head">
+        <h2 id="coin-detail-title">Detailansicht</h2>
+        <span class="section-note" id="coin-status">Quelle: CoinGecko · lädt</span>
+      </div>
+
+      <article class="card coin-detail-card">
+        <div class="coin-detail-top">
+          <div>
+            <h3 id="coin-title">Coin</h3>
+            <span class="tag" id="coin-symbol">--</span>
+          </div>
+          <a class="button" href="index.html#kurse">Zurück</a>
+        </div>
+
+        <div class="coin-stats" aria-live="polite">
+          <div>
+            <span class="coin-label">Preis EUR</span>
+            <strong id="coin-price">lädt …</strong>
+          </div>
+          <div>
+            <span class="coin-label">24h</span>
+            <strong id="coin-change-24h">--</strong>
+          </div>
+          <div>
+            <span class="coin-label">7d</span>
+            <strong id="coin-change-7d">--</strong>
+          </div>
+        </div>
+
+        <canvas class="coin-chart" id="coin-chart" aria-label="7-Tage Kursverlauf" role="img"></canvas>
+      </article>
+    </section>
+
+    <section aria-labelledby="coin-note-title">
+      <div class="section-head">
+        <h2 id="coin-note-title">Hinweis</h2>
+        <span class="section-note">nüchtern bleiben</span>
+      </div>
+
+      <div class="card crypto-note">
+        <p>Die angezeigten Kurse dienen nur zur Information. Sie sind keine Finanzberatung, keine Anlageberatung und keine Kauf- oder Verkaufsempfehlung.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <div>© <span id="year"></span> Tom &amp; Gina · Crypto Kurse</div>
+      <div class="footer-links">
+        <a href="index.html">Übersicht</a>
+        <a href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer">CoinGecko</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="coin.js"></script>
+</body>
+</html>
