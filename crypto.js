@@ -17,7 +17,8 @@ const apiToCoinIds = coins.reduce((mappedIds, coin) => {
   return mappedIds;
 }, {});
 const cryptoEndpoint = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${apiIds}&price_change_percentage=24h,7d&sparkline=true`;
-const refreshIntervalMs = 60000;
+const refreshIntervalMs = 180000;
+const refreshIntervalSeconds = refreshIntervalMs / 1000;
 let isLoadingCrypto = false;
 
 const priceFormatter = new Intl.NumberFormat('de-DE', {
@@ -33,7 +34,7 @@ const changeFormatter = new Intl.NumberFormat('de-DE', {
 function setCryptoFallback() {
   const updatedElement = document.getElementById('crypto-updated');
   if (updatedElement) {
-    updatedElement.textContent = 'Quelle: CoinGecko · Aktualisierung fehlgeschlagen';
+    updatedElement.textContent = 'Quelle: CoinGecko · Aktualisierung verzögert';
   }
 }
 
@@ -114,7 +115,7 @@ function updateCryptoCards(data) {
 
   const updatedElement = document.getElementById('crypto-updated');
   if (updatedElement) {
-    updatedElement.textContent = `Quelle: CoinGecko · Aktualisiert ${new Date().toLocaleTimeString('de-DE')} · Auto-Refresh 60s`;
+    updatedElement.textContent = `Quelle: CoinGecko · Aktualisiert ${new Date().toLocaleTimeString('de-DE')} · Auto-Refresh ${refreshIntervalSeconds}s`;
   }
 }
 
