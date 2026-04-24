@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crypto Kurse · Tom & Gina</title>
+  <meta name="description" content="Kleine Crypto-Kursseite für BTC, ETH und SOL im Tom & Gina Design. Kurse dienen nur zur Information.">
+  <meta name="theme-color" content="#05060a">
+  <meta property="og:title" content="Crypto Kurse · Tom & Gina">
+  <meta property="og:site_name" content="runlevel.eth">
+  <meta property="og:description" content="BTC, ETH und SOL ruhig und kompakt im Blick. Keine Anlageberatung.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="gina.png">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="crypto.css">
+  <link rel="preconnect" href="https://api.coingecko.com">
+  <link rel="dns-prefetch" href="https://api.coingecko.com">
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%2305060a"/><text x="50%25" y="54%25" text-anchor="middle" dominant-baseline="middle" fill="%237fb0ff" font-family="Arial, sans-serif" font-size="30">₿</text></svg>'>
+</head>
+
+<body>
+  <header>
+    <div class="hero-text">
+      <a class="badge ens" href="https://klangpfad.github.io/">Zurück Startseite</a>
+      <h1>Crypto Kurse</h1>
+      <p class="hero-copy">BTC, ETH und SOL ruhig im Blick, ohne Hype und ohne Handlungsempfehlung.</p>
+      <p>Eine kleine Kursseite für schnelle Orientierung. Die Werte werden über CoinGecko geladen und dienen ausschließlich zur Information.</p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#kurse">Kurse ansehen</a>
+        <a class="button" href="https://klangpfad.github.io/#projekte">Zurück zu Projekte</a>
+      </div>
+
+      <div class="meta-row" aria-label="Schwerpunkte">
+        <span class="meta-pill">BTC · ETH · SOL</span>
+        <span class="meta-pill">Live-Daten via CoinGecko</span>
+        <span class="meta-pill">nur Information</span>
+      </div>
+
+      <div class="system-status" aria-label="Systemstatus">
+        <span class="status-dot"></span>
+        <span>market watch online</span>
+        <span class="status-sep">·</span>
+        <span>coingecko source</span>
+        <span class="status-sep">·</span>
+        <span>no advice mode</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="gina.png" alt="Gina – KI-Avatar" loading="lazy">
+    </div>
+  </header>
+
+  <main>
+    <section id="kurse" aria-labelledby="crypto-title">
+      <div class="section-head">
+        <h2 id="crypto-title">Kursübersicht</h2>
+        <span class="section-note">Aktuelle Preise, kompakt gehalten</span>
+      </div>
+
+      <div class="crypto-board" aria-live="polite">
+        <article class="card crypto-card project-card" data-coin-card="bitcoin">
+          <div class="crypto-top">
+            <h3>Bitcoin</h3>
+            <span class="tag">BTC</span>
+          </div>
+          <p class="crypto-price" data-coin-price="bitcoin">lädt …</p>
+          <div class="crypto-change" data-coin-change="bitcoin">24h: --</div>
+        </article>
+
+        <article class="card crypto-card project-card" data-coin-card="ethereum">
+          <div class="crypto-top">
+            <h3>Ethereum</h3>
+            <span class="tag">ETH</span>
+          </div>
+          <p class="crypto-price" data-coin-price="ethereum">lädt …</p>
+          <div class="crypto-change" data-coin-change="ethereum">24h: --</div>
+        </article>
+
+        <article class="card crypto-card project-card" data-coin-card="solana">
+          <div class="crypto-top">
+            <h3>Solana</h3>
+            <span class="tag">SOL</span>
+          </div>
+          <p class="crypto-price" data-coin-price="solana">lädt …</p>
+          <div class="crypto-change" data-coin-change="solana">24h: --</div>
+        </article>
+      </div>
+
+      <div class="crypto-source">
+        <span id="crypto-updated">Quelle: CoinGecko · Aktualisierung läuft</span>
+        <a class="button" href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer">CoinGecko öffnen</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="info-title">
+      <div class="section-head">
+        <h2 id="info-title">Hinweis</h2>
+        <span class="section-note">nüchtern bleiben</span>
+      </div>
+
+      <div class="card crypto-note">
+        <p>Die angezeigten Kurse dienen nur zur Information. Sie sind keine Finanzberatung, keine Anlageberatung und keine Kauf- oder Verkaufsempfehlung.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <div>© <span id="year"></span> Tom &amp; Gina · Crypto Kurse</div>
+      <div class="footer-links">
+        <a href="https://klangpfad.github.io/">Startseite</a>
+        <a href="https://klangpfad.github.io/impressum.html">Impressum</a>
+        <a href="https://klangpfad.github.io/datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="crypto.js"></script>
+</body>
+</html>
